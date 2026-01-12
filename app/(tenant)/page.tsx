@@ -1,12 +1,12 @@
-import { headers } from "next/headers";
+import { cookies } from "next/headers";
 
 export default function TenantHome() {
-  // headers() returns ReadonlyHeaders in server components
-  const tenant = headers().get("x-tenant") || "default";
+  // Read tenant cookie
+  // const tenant = cookies().get("tenant")?.value || "default";
 
   return (
     <div>
-      <h1>Tenant: {tenant}</h1>
+      <h1>Tenant: {"abcd"}</h1>
       <p>This is a shared deployment.</p>
     </div>
   );
